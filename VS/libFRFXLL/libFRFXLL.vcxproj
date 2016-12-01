@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{521B0444-D1E0-472F-809C-D3D14222620F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>libFRFXLL</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\libs</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\src\algorithm;.\src\include\stl\config;.\src\include;.\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\src\algorithm;.\src\include\stl\config;.\src\include;.\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\src\algorithm;.\src\include\stl\config;.\src\include;.\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\src\algorithm;.\src\include\stl\config;.\src\include;.\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\FRFXLL.h" />
+    <ClInclude Include="include\FRFXLL_Results.h" />
+    <ClInclude Include="src\algorithm\assignment.h" />
+    <ClInclude Include="src\algorithm\biffilt.h" />
+    <ClInclude Include="src\algorithm\block_fft.h" />
+    <ClInclude Include="src\algorithm\complex.h" />
+    <ClInclude Include="src\algorithm\conv2.h" />
+    <ClInclude Include="src\algorithm\delay.h" />
+    <ClInclude Include="src\algorithm\deserializeFpData.h" />
+    <ClInclude Include="src\algorithm\diagnostics.h" />
+    <ClInclude Include="src\algorithm\dpError.h" />
+    <ClInclude Include="src\algorithm\dpfr.h" />
+    <ClInclude Include="src\algorithm\dpTypes.h" />
+    <ClInclude Include="src\algorithm\extract_minutia.h" />
+    <ClInclude Include="src\algorithm\FeatureExtraction.h" />
+    <ClInclude Include="src\algorithm\fft_enhance.h" />
+    <ClInclude Include="src\algorithm\FingerImageRecord.h" />
+    <ClInclude Include="src\algorithm\fixed_allocator.h" />
+    <ClInclude Include="src\algorithm\freeman.h" />
+    <ClInclude Include="src\algorithm\imresize.h" />
+    <ClInclude Include="src\algorithm\IncludeFirst.h" />
+    <ClInclude Include="src\algorithm\integer_limits.h" />
+    <ClInclude Include="src\algorithm\intmath.h" />
+    <ClInclude Include="src\algorithm\matchData.h" />
+    <ClInclude Include="src\algorithm\member_comp.h" />
+    <ClInclude Include="src\algorithm\orimap.h" />
+    <ClInclude Include="src\algorithm\ScaleFactors.h" />
+    <ClInclude Include="src\algorithm\serializeFpData.h" />
+    <ClInclude Include="src\algorithm\settings.h" />
+    <ClInclude Include="src\algorithm\static_assert.h" />
+    <ClInclude Include="src\algorithm\top_n.h" />
+    <ClInclude Include="src\algorithm\version.h" />
+    <ClInclude Include="src\include\stl\config\stl_armcc.h" />
+    <ClInclude Include="src\include\stl\config\user_config.h" />
+    <ClInclude Include="src\include\stl\config\_epilog.h" />
+    <ClInclude Include="src\include\stl\config\_system.h" />
+    <ClInclude Include="src\include\stl\_cmath.h" />
+    <ClInclude Include="src\include\stl\_cstdlib.h" />
+    <ClInclude Include="src\include\stl\_range_errors.h" />
+    <ClInclude Include="src\libFRFXLL\CreateFtrSet.h" />
+    <ClInclude Include="src\libFRFXLL\FpDataObj.h" />
+    <ClInclude Include="src\libFRFXLL\Object.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\libFRFXLL\FRFXLLCreateContext.cpp" />
+    <ClCompile Include="src\libFRFXLL\FRFXLLCreateFeatureSet.cpp" />
+    <ClCompile Include="src\libFRFXLL\FRFXLLCreateFeatureSetFromRaw.cpp" />
+    <ClCompile Include="src\libFRFXLL\FRFXLLCreateFeatureSetInPlace.cpp" />
+    <ClCompile Include="src\libFRFXLL\FRFXLLCreateFeatureSetInPlaceFromRaw.cpp" />
+    <ClCompile Include="src\libFRFXLL\FRFXLLCreateLibraryContext.cpp" />
+    <ClCompile Include="src\libFRFXLL\FRFXLLDuplicateHandle.cpp" />
+    <ClCompile Include="src\libFRFXLL\FRFXLLExport.cpp" />
+    <ClCompile Include="src\libFRFXLL\FRFXLLGetLibraryVersion.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
