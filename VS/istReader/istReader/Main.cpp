@@ -71,13 +71,15 @@ vector<Minutia> readIst(const string & fileName)
 		x = 0x100 * (minutiaData[0] & ((1 << 6) - 1)) + minutiaData[1];
 		y = 0x100 * (minutiaData[2] & ((1 << 6) - 1)) + minutiaData[3];
 
-		double angle = ((M_PI + M_PI) * ((double)minutiaData[4] / 256.0)) + M_PI;
+		//double angle = ((M_PI + M_PI) * ((double)minutiaData[4] / 256.0)) + M_PI;
+		double angle = roundf( (double)minutiaData[4] * (360.0/255.0)) ;
 
 		uint8_t quality = minutiaData[5];
 
 		min.x = x;
 		min.y = y;
-		min.angle = (angle* 180.0 / M_PI);
+		//min.angle = (angle* 180.0 / M_PI);
+		min.angle = (angle);
 		min.quality = quality;
 
 		minVector.push_back(min);
@@ -123,10 +125,14 @@ void main()
 	
 	strcpy(istFilePath, "D:/Kashif/Development/fingerjetfx/sample/ist/FVCDB20042IST/");
 	strcpy(xytFilePath, "D:/Kashif/Development/fingerjetfx/sample/xyt/FVCDB20042XYT/");
-	for (int subId = 1; subId <= 100; subId++){
-		for (int fingerId = 1; fingerId <= 8; fingerId++){
-			sprintf(istFileName, "%s%d_%d.ist", istFilePath, subId, fingerId);
-			sprintf(xytFileName, "%s%d_%d.xyt", xytFilePath, subId, fingerId);
+	for (int subId = 1; subId <= 2; subId++){
+		for (int fingerId = 1; fingerId <= 2; fingerId++){
+			//sprintf(istFileName, "%s%d_%d.ist", istFilePath, subId, fingerId);
+			//sprintf(xytFileName, "%s%d_%d.xyt", xytFilePath, subId, fingerId);
+
+			sprintf(istFileName, "%s%d_%d.ist", "E:/fvc_certification/ISOTemplate/Examples/", subId, fingerId);
+			sprintf(xytFileName, "%s%d_%d.xyt", "E:/fvc_certification/ISOTemplate/Examples/", subId, fingerId);
+
 			printf("file process %s\n", istFileName);
 			//vector<Minutia> minVector = readIst("C:/Users/TNDUser/Desktop/analysis/1_1.ist");
 			//writeXYT("C:/Users/TNDUser/Desktop/analysis/fingerJet/1_1_ist.xyt", minVector);
