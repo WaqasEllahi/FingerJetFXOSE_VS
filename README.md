@@ -1,11 +1,10 @@
 # FingerJetFXOSE_VS
-FingerJetFXOSE Visual Studio
 
-Modified by Waqas ellahi, waqas_ellahi@yahoo.com
+FingerJetFXOSE for Visual Studio
 
-This is a visual studio conversion of FingerJetFXOSE code which is orignially located at [here.](https://github.com/FingerJetFXOSE/FingerJetFXOSE)
+This is a visual studio transcode/translation of FingerJetFXOSE code which is orignially located at [here.](https://github.com/FingerJetFXOSE/FingerJetFXOSE)
 
-Just open solution file from VS->libFRFXLL folder, change source and destination folder path in program arguments and enjoy it.
+To run a test, open the solution file from visuak studio ->libFRFXLL folder, change source and destination folder path in program arguments. 
 
 
 
